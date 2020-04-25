@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0C1885900810601510E0C632060FAF26 /* GooglePlaces */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2FC2AC47FDB0310285CE777F18CD1532 /* Build configuration list for PBXAggregateTarget "GooglePlaces" */;
+			buildPhases = (
+			);
+			dependencies = (
+				D42315111F400C0605ACCD6B5CAF2178 /* PBXTargetDependency */,
+			);
+			name = GooglePlaces;
+		};
+		7C4F8ADD8C1671062D4A7C0FBAA5C98C /* RadarSDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 02A913BA5087965703FB7351FBB01FF8 /* Build configuration list for PBXAggregateTarget "RadarSDK" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = RadarSDK;
+		};
+		E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = GoogleMaps;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		5713D5B835C65760E1EC78DE4914E978 /* Pods-Stargaze-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F984786A053C9D909A281D4403D44B /* Pods-Stargaze-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27F84A190E460F99D41ADCC0D02785C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		6EB1C2DD30E6564FC3135C9E8002D8F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		90F0FFE629D88D059BD6DE8C117CFD23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C4F8ADD8C1671062D4A7C0FBAA5C98C;
+			remoteInfo = RadarSDK;
+		};
+		E97933D2E5CC4E9945AB2CF421FA014F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
+			remoteInfo = GooglePlaces;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		006D11E550555DB2220357EF25777D28 /* RadarCoordinate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarCoordinate.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarCoordinate.h; sourceTree = "<group>"; };
+		0CEB9CFB7F9B9D70286DA8570E3D222A /* RadarUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarUser.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarUser.h; sourceTree = "<group>"; };
+		0E24BE5D49BEA7CEACD8676EB7F9A33D /* RadarChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarChain.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarChain.h; sourceTree = "<group>"; };
+		0FE72720FF7F68C921A23D9B82E4362F /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
+		107DB5F9C3E9F5A5C26305E603EC2DB2 /* RadarRouteDuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarRouteDuration.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarRouteDuration.h; sourceTree = "<group>"; };
+		13C6DB3250D6A31BE6D9F8FBAF9DBB11 /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
+		1525CA728542B878CEE408B4E3A86758 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		1CEEA3F5779A5657DE43E82A67FAA56D /* RadarEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarEvent.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarEvent.h; sourceTree = "<group>"; };
+		249FB8AAFA92930480E69B1779946103 /* RadarUserInsightsState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarUserInsightsState.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarUserInsightsState.h; sourceTree = "<group>"; };
+		317FC9ABE1E036C3DD191325398BA9DF /* RadarTrackingOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarTrackingOptions.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarTrackingOptions.h; sourceTree = "<group>"; };
+		3279DA1DCD0E4911BB4E827703485A16 /* RadarRouteDistance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarRouteDistance.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarRouteDistance.h; sourceTree = "<group>"; };
+		33B5E46614D331E2F25F293EA925817B /* RadarSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarSDK.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarSDK.h; sourceTree = "<group>"; };
+		3BA0B2460066A3B8390635D099AA1CCE /* Pods-Stargaze-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Stargaze-resources.sh"; sourceTree = "<group>"; };
+		4610A3FB15EF4B5D112AF729AADB7BD6 /* RadarCircleGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarCircleGeometry.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarCircleGeometry.h; sourceTree = "<group>"; };
+		489D40CD02AA38CD28D31CD369342ECD /* Pods-Stargaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Stargaze.release.xcconfig"; sourceTree = "<group>"; };
+		49A8A2E596D20CB91EBB0DC79E4D4DC4 /* RadarUserInsightsLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarUserInsightsLocation.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarUserInsightsLocation.h; sourceTree = "<group>"; };
+		4DBB4F7B4854F80FA139BCDBC5267A8B /* libPods-Stargaze.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Stargaze.a"; path = "libPods-Stargaze.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		664DB11AE69C7BC89FFF7C432D466A5E /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		687C6C326B37963F8AF670F6F6EF9ECE /* GooglePlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.release.xcconfig; sourceTree = "<group>"; };
+		79406B8A73EA5E43115C0E75FCF8F3E2 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		82482B5B78CA2E6A9245E85AE68296CD /* RadarRoutes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarRoutes.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarRoutes.h; sourceTree = "<group>"; };
+		835CE6385300052CC58D27FB0D376C58 /* RadarSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RadarSDK.framework; path = dist/RadarSDK.framework; sourceTree = "<group>"; };
+		8B654F228D31E40F6D7C8F5146326490 /* RadarGeofence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarGeofence.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarGeofence.h; sourceTree = "<group>"; };
+		8DFB6E4EB5C7C811760222ADFC91E71F /* RadarContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarContext.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarContext.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9ECA97EDED02E40AE2CE3D32D94E5AE9 /* RadarSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RadarSDK.release.xcconfig; sourceTree = "<group>"; };
+		A09BA21BDF3DA8C5744E16EBC40755A7 /* RadarPolygonGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarPolygonGeometry.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarPolygonGeometry.h; sourceTree = "<group>"; };
+		A1282BA3C8F032BE52C8C7A454361029 /* Pods-Stargaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Stargaze.debug.xcconfig"; sourceTree = "<group>"; };
+		A6544E340C67B8DA309E580D67457128 /* RadarPlace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarPlace.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarPlace.h; sourceTree = "<group>"; };
+		AC71E734B263685F4BCB1C4E0A6BB638 /* RadarRoute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarRoute.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarRoute.h; sourceTree = "<group>"; };
+		AF505C479BB681F65E4E86403807BC57 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		B4E9BE09CFB1DF47851FB86EF699CDC5 /* Radar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Radar.h; path = dist/RadarSDK.framework/Versions/A/Headers/Radar.h; sourceTree = "<group>"; };
+		B52B98A95C1684796169B86A42E5ED05 /* RadarGeofenceGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarGeofenceGeometry.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarGeofenceGeometry.h; sourceTree = "<group>"; };
+		BAD7DB4D8C9B51FA1B0270B3029D9FAB /* Pods-Stargaze-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Stargaze-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C0CC34538B2332F285A4A0D267ACD472 /* RadarDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarDelegate.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarDelegate.h; sourceTree = "<group>"; };
+		C0F984786A053C9D909A281D4403D44B /* Pods-Stargaze-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Stargaze-dummy.m"; sourceTree = "<group>"; };
+		CE7CAF5575E4293AFD31076408E498E5 /* RadarSegment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarSegment.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarSegment.h; sourceTree = "<group>"; };
+		D1B752311668205E2620DF04DD4724E8 /* RadarUserInsights.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarUserInsights.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarUserInsights.h; sourceTree = "<group>"; };
+		D58DA5D19E9C6C09E26579338B9DF22C /* Pods-Stargaze-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Stargaze-acknowledgements.plist"; sourceTree = "<group>"; };
+		D6D0F3BA316895F547B7111E96B197D5 /* RadarRegion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarRegion.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarRegion.h; sourceTree = "<group>"; };
+		D80822DE35F829184F8807973F1BE171 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		DEA1A19000F17FDCD9EF0A8AB4ED0D79 /* GooglePlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.debug.xcconfig; sourceTree = "<group>"; };
+		E017D0DD57CADA568C09E69BD0D2D2DC /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		E417461CBC7E5C005ED6F7E0252C973D /* RadarAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarAddress.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarAddress.h; sourceTree = "<group>"; };
+		EC4588D28F1A39C9514A2C624506CD66 /* RadarSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RadarSDK.debug.xcconfig; sourceTree = "<group>"; };
+		F45C898CF2D538EFF466066BC7B079D2 /* RadarPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RadarPoint.h; path = dist/RadarSDK.framework/Versions/A/Headers/RadarPoint.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		748984F177D1BE745D26F08A9EC2C096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08E75BCEEBEB0B152E65146515805ACD /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				43E446A5E10D594D38FF74EA9C8BECBA /* Frameworks */,
+				300B8D97B6592F69004FFCBAB52D71ED /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		0AE66FB497F06426AA57425386C59739 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA7F9C17BE5F80CA96081E7D61F75EEC /* GoogleMaps */,
+				CDC1F0F0E287677405808F4B193D2C21 /* GooglePlaces */,
+				21739E5175F10AED9F80DC315EBA861D /* RadarSDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		21739E5175F10AED9F80DC315EBA861D /* RadarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B4E9BE09CFB1DF47851FB86EF699CDC5 /* Radar.h */,
+				E417461CBC7E5C005ED6F7E0252C973D /* RadarAddress.h */,
+				0E24BE5D49BEA7CEACD8676EB7F9A33D /* RadarChain.h */,
+				4610A3FB15EF4B5D112AF729AADB7BD6 /* RadarCircleGeometry.h */,
+				8DFB6E4EB5C7C811760222ADFC91E71F /* RadarContext.h */,
+				006D11E550555DB2220357EF25777D28 /* RadarCoordinate.h */,
+				C0CC34538B2332F285A4A0D267ACD472 /* RadarDelegate.h */,
+				1CEEA3F5779A5657DE43E82A67FAA56D /* RadarEvent.h */,
+				8B654F228D31E40F6D7C8F5146326490 /* RadarGeofence.h */,
+				B52B98A95C1684796169B86A42E5ED05 /* RadarGeofenceGeometry.h */,
+				A6544E340C67B8DA309E580D67457128 /* RadarPlace.h */,
+				F45C898CF2D538EFF466066BC7B079D2 /* RadarPoint.h */,
+				A09BA21BDF3DA8C5744E16EBC40755A7 /* RadarPolygonGeometry.h */,
+				D6D0F3BA316895F547B7111E96B197D5 /* RadarRegion.h */,
+				AC71E734B263685F4BCB1C4E0A6BB638 /* RadarRoute.h */,
+				3279DA1DCD0E4911BB4E827703485A16 /* RadarRouteDistance.h */,
+				107DB5F9C3E9F5A5C26305E603EC2DB2 /* RadarRouteDuration.h */,
+				82482B5B78CA2E6A9245E85AE68296CD /* RadarRoutes.h */,
+				33B5E46614D331E2F25F293EA925817B /* RadarSDK.h */,
+				CE7CAF5575E4293AFD31076408E498E5 /* RadarSegment.h */,
+				317FC9ABE1E036C3DD191325398BA9DF /* RadarTrackingOptions.h */,
+				0CEB9CFB7F9B9D70286DA8570E3D222A /* RadarUser.h */,
+				D1B752311668205E2620DF04DD4724E8 /* RadarUserInsights.h */,
+				49A8A2E596D20CB91EBB0DC79E4D4DC4 /* RadarUserInsightsLocation.h */,
+				249FB8AAFA92930480E69B1779946103 /* RadarUserInsightsState.h */,
+				B695BC245008EE7FCCAB87BCC20B8C72 /* Frameworks */,
+				A078EB3227D6FA57852F64A947F9AA1A /* Support Files */,
+			);
+			name = RadarSDK;
+			path = RadarSDK;
+			sourceTree = "<group>";
+		};
+		300B8D97B6592F69004FFCBAB52D71ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D80822DE35F829184F8807973F1BE171 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3E3BB37CE6108323AD8D9BAECB9EBA83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF505C479BB681F65E4E86403807BC57 /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43E446A5E10D594D38FF74EA9C8BECBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1525CA728542B878CEE408B4E3A86758 /* GoogleMaps.framework */,
+				79406B8A73EA5E43115C0E75FCF8F3E2 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54246786279015EF424A73E09FB2AAC3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E017D0DD57CADA568C09E69BD0D2D2DC /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		784839232F33F8EECAA1CEF70D172A49 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0FE72720FF7F68C921A23D9B82E4362F /* GoogleMaps.debug.xcconfig */,
+				13C6DB3250D6A31BE6D9F8FBAF9DBB11 /* GoogleMaps.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaps";
+			sourceTree = "<group>";
+		};
+		80E13C92A2475B13F35C34C87B9C911C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DBB4F7B4854F80FA139BCDBC5267A8B /* libPods-Stargaze.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CA036163ED332EF9F4DDE4D4C06FB89 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E35015368EE325230ACB2BC59941BAED /* Pods-Stargaze */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A078EB3227D6FA57852F64A947F9AA1A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC4588D28F1A39C9514A2C624506CD66 /* RadarSDK.debug.xcconfig */,
+				9ECA97EDED02E40AE2CE3D32D94E5AE9 /* RadarSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RadarSDK";
+			sourceTree = "<group>";
+		};
+		A0C690C0CB46D9338DE8068BFA487784 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				664DB11AE69C7BC89FFF7C432D466A5E /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B695BC245008EE7FCCAB87BCC20B8C72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				835CE6385300052CC58D27FB0D376C58 /* RadarSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA7F9C17BE5F80CA96081E7D61F75EEC /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				FD28409757277EF6B309BB5D805E3974 /* Base */,
+				08E75BCEEBEB0B152E65146515805ACD /* Maps */,
+				784839232F33F8EECAA1CEF70D172A49 /* Support Files */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		CDC1F0F0E287677405808F4B193D2C21 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				3E3BB37CE6108323AD8D9BAECB9EBA83 /* Frameworks */,
+				54246786279015EF424A73E09FB2AAC3 /* Resources */,
+				F629BD1B86F802F5D20FB093B402D90A /* Support Files */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				0AE66FB497F06426AA57425386C59739 /* Pods */,
+				80E13C92A2475B13F35C34C87B9C911C /* Products */,
+				9CA036163ED332EF9F4DDE4D4C06FB89 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E35015368EE325230ACB2BC59941BAED /* Pods-Stargaze */ = {
+			isa = PBXGroup;
+			children = (
+				BAD7DB4D8C9B51FA1B0270B3029D9FAB /* Pods-Stargaze-acknowledgements.markdown */,
+				D58DA5D19E9C6C09E26579338B9DF22C /* Pods-Stargaze-acknowledgements.plist */,
+				C0F984786A053C9D909A281D4403D44B /* Pods-Stargaze-dummy.m */,
+				3BA0B2460066A3B8390635D099AA1CCE /* Pods-Stargaze-resources.sh */,
+				A1282BA3C8F032BE52C8C7A454361029 /* Pods-Stargaze.debug.xcconfig */,
+				489D40CD02AA38CD28D31CD369342ECD /* Pods-Stargaze.release.xcconfig */,
+			);
+			name = "Pods-Stargaze";
+			path = "Target Support Files/Pods-Stargaze";
+			sourceTree = "<group>";
+		};
+		F629BD1B86F802F5D20FB093B402D90A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DEA1A19000F17FDCD9EF0A8AB4ED0D79 /* GooglePlaces.debug.xcconfig */,
+				687C6C326B37963F8AF670F6F6EF9ECE /* GooglePlaces.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GooglePlaces";
+			sourceTree = "<group>";
+		};
+		FD28409757277EF6B309BB5D805E3974 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A0C690C0CB46D9338DE8068BFA487784 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		54294BEE69AF3BC90B28CD49A04F8169 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0F3B13AD3D960DCC4C9C88B2D340F1CB /* Pods-Stargaze */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6019E01B5D631538632320865561953C /* Build configuration list for PBXNativeTarget "Pods-Stargaze" */;
+			buildPhases = (
+				54294BEE69AF3BC90B28CD49A04F8169 /* Headers */,
+				243CE2CD8B9B1217321E0DD9132C1DAB /* Sources */,
+				748984F177D1BE745D26F08A9EC2C096 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63604537C94597C8EE8E9D8804F095FA /* PBXTargetDependency */,
+				E7D516FCE9DB83A220A7425765BCE454 /* PBXTargetDependency */,
+				2B9482D0A840BB84358302DBDF81E575 /* PBXTargetDependency */,
+			);
+			name = "Pods-Stargaze";
+			productName = "Pods-Stargaze";
+			productReference = 4DBB4F7B4854F80FA139BCDBC5267A8B /* libPods-Stargaze.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 80E13C92A2475B13F35C34C87B9C911C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */,
+				0C1885900810601510E0C632060FAF26 /* GooglePlaces */,
+				0F3B13AD3D960DCC4C9C88B2D340F1CB /* Pods-Stargaze */,
+				7C4F8ADD8C1671062D4A7C0FBAA5C98C /* RadarSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		243CE2CD8B9B1217321E0DD9132C1DAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5713D5B835C65760E1EC78DE4914E978 /* Pods-Stargaze-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B9482D0A840BB84358302DBDF81E575 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RadarSDK;
+			target = 7C4F8ADD8C1671062D4A7C0FBAA5C98C /* RadarSDK */;
+			targetProxy = 90F0FFE629D88D059BD6DE8C117CFD23 /* PBXContainerItemProxy */;
+		};
+		63604537C94597C8EE8E9D8804F095FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = 27F84A190E460F99D41ADCC0D02785C0 /* PBXContainerItemProxy */;
+		};
+		D42315111F400C0605ACCD6B5CAF2178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = 6EB1C2DD30E6564FC3135C9E8002D8F7 /* PBXContainerItemProxy */;
+		};
+		E7D516FCE9DB83A220A7425765BCE454 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlaces;
+			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
+			targetProxy = E97933D2E5CC4E9945AB2CF421FA014F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		14DA420569AFD47D882570FF8F6EC77A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1282BA3C8F032BE52C8C7A454361029 /* Pods-Stargaze.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2AE606A2A6AD514679943C989B1C3B9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ECA97EDED02E40AE2CE3D32D94E5AE9 /* RadarSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4AE9FC8A852243DC9A2EFE9BA39BAC7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEA1A19000F17FDCD9EF0A8AB4ED0D79 /* GooglePlaces.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		573B04AB9E058A1911353A22A780E993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 687C6C326B37963F8AF670F6F6EF9ECE /* GooglePlaces.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6C61D818ACD3C2C116FED6A9C67E91B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7DC5F11AFBEAE473E8D3C24A2D11338D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8A82A99916D021F86FB5E1E837783BEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 489D40CD02AA38CD28D31CD369342ECD /* Pods-Stargaze.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CE5BA3EF4F6FABF028CE30772ECDA11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13C6DB3250D6A31BE6D9F8FBAF9DBB11 /* GoogleMaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF1484DCF8F0FE8F7471F289C4853CB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC4588D28F1A39C9514A2C624506CD66 /* RadarSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E1E452060D51DF935547186CE54B26CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FE72720FF7F68C921A23D9B82E4362F /* GoogleMaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02A913BA5087965703FB7351FBB01FF8 /* Build configuration list for PBXAggregateTarget "RadarSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1484DCF8F0FE8F7471F289C4853CB2 /* Debug */,
+				2AE606A2A6AD514679943C989B1C3B9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FC2AC47FDB0310285CE777F18CD1532 /* Build configuration list for PBXAggregateTarget "GooglePlaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AE9FC8A852243DC9A2EFE9BA39BAC7B /* Debug */,
+				573B04AB9E058A1911353A22A780E993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E452060D51DF935547186CE54B26CC /* Debug */,
+				8CE5BA3EF4F6FABF028CE30772ECDA11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C61D818ACD3C2C116FED6A9C67E91B4 /* Debug */,
+				7DC5F11AFBEAE473E8D3C24A2D11338D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6019E01B5D631538632320865561953C /* Build configuration list for PBXNativeTarget "Pods-Stargaze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14DA420569AFD47D882570FF8F6EC77A /* Debug */,
+				8A82A99916D021F86FB5E1E837783BEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

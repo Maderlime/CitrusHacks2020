@@ -1,0 +1,6 @@
+source 'https://github.com/CocoaPods/Specs.git'
+target 'Stargaze' do
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+end
+pod 'RadarSDK', '~> 3.0.0'
