@@ -155,6 +155,31 @@ class ViewController: UIViewController{
         return renderer
     }
 
+    // Determine location condition based on retrieved and passed in data
+    func determine_condition(_ long: Double, _ lat:Double, _ humidity: Double, _ Temp:Double, _ buildings: Int, _ isOnline: Bool) ->  Int{
+        var level = 0
+        // see how many buildings we will find with geofence
+        if isOnline{
+            Radar.searchGeofences(
+                radius: 1000,
+                tags: ["store", "building", "house"],
+                limit: 500
+            ) { (status, location, geofences) in
+                print("Search geofences: status = \(Radar.stringForStatus(status)); geofences = \(String(describing: geofences))")
+                var build = geofences?.count
+                if build! < 500{
+                    level = level + 50
+                }
+            }
+        }
+        if humidity < 50{
+            level += 20
+        }
+        if (Temp < 30){level = 1 + level}
+        else if(Temp > 100){level = 1 + level}
+        else{level += 20}
+        return level
+    }
     
     /**
      
