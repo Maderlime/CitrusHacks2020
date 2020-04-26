@@ -17,7 +17,10 @@
 		C143F2232453E39900F904D6 /* StargazeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C143F2222453E39900F904D6 /* StargazeUITests.swift */; };
 		C143F2312453EEC400F904D6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C143F2302453EEC400F904D6 /* Podfile */; };
 		C1859E082454CE9C00CA6F96 /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = C1859E072454CE9C00CA6F96 /* data.txt */; };
-		C1F0CB9C2454F1A700774497 /* places_togo in Resources */ = {isa = PBXBuildFile; fileRef = C1F0CB9B2454F1A700774497 /* places_togo */; };
+		C1F0CB9C2454F1A700774497 /* places_togo.txt in Resources */ = {isa = PBXBuildFile; fileRef = C1F0CB9B2454F1A700774497 /* places_togo.txt */; };
+		C1F0CB9E24551D5400774497 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0CB9D24551D5400774497 /* SettingCell.swift */; };
+		C1F0CBA02455286C00774497 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0CB9F2455286C00774497 /* VideoCell.swift */; };
+		C1F0CBA224552A7F00774497 /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0CBA124552A7F00774497 /* SettingsLauncher.swift */; };
 		C9A3DE44F810F6468FED7DD3 /* libPods-Stargaze.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7ABA6246EFE1F620B41A196 /* libPods-Stargaze.a */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +60,10 @@
 		C143F2242453E39900F904D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C143F2302453EEC400F904D6 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		C1859E072454CE9C00CA6F96 /* data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
-		C1F0CB9B2454F1A700774497 /* places_togo */ = {isa = PBXFileReference; lastKnownFileType = text; path = places_togo; sourceTree = "<group>"; };
+		C1F0CB9B2454F1A700774497 /* places_togo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = places_togo.txt; sourceTree = "<group>"; };
+		C1F0CB9D24551D5400774497 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		C1F0CB9F2455286C00774497 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		C1F0CBA124552A7F00774497 /* SettingsLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLauncher.swift; sourceTree = "<group>"; };
 		D7083321DEA3FBC1BA430B85 /* Pods-Stargaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stargaze.debug.xcconfig"; path = "Target Support Files/Pods-Stargaze/Pods-Stargaze.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				C143F2302453EEC400F904D6 /* Podfile */,
+				C1F0CB9B2454F1A700774497 /* places_togo.txt */,
 				C143F1FF2453E39700F904D6 /* Stargaze */,
 				C143F2162453E39900F904D6 /* StargazeTests */,
 				C143F2212453E39900F904D6 /* StargazeUITests */,
@@ -133,6 +140,9 @@
 				C143F2002453E39700F904D6 /* AppDelegate.swift */,
 				C143F2022453E39700F904D6 /* SceneDelegate.swift */,
 				C143F2042453E39700F904D6 /* ViewController.swift */,
+				C1F0CBA124552A7F00774497 /* SettingsLauncher.swift */,
+				C1F0CB9F2455286C00774497 /* VideoCell.swift */,
+				C1F0CB9D24551D5400774497 /* SettingCell.swift */,
 				C1859E062454CE5A00CA6F96 /* outsideFiles */,
 				C143F2062453E39700F904D6 /* Main.storyboard */,
 				C143F2092453E39900F904D6 /* Assets.xcassets */,
@@ -164,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				C1859E072454CE9C00CA6F96 /* data.txt */,
-				C1F0CB9B2454F1A700774497 /* places_togo */,
 			);
 			path = outsideFiles;
 			sourceTree = "<group>";
@@ -278,7 +287,7 @@
 				C143F20D2453E39900F904D6 /* LaunchScreen.storyboard in Resources */,
 				C143F20A2453E39900F904D6 /* Assets.xcassets in Resources */,
 				C143F2312453EEC400F904D6 /* Podfile in Resources */,
-				C1F0CB9C2454F1A700774497 /* places_togo in Resources */,
+				C1F0CB9C2454F1A700774497 /* places_togo.txt in Resources */,
 				C143F2082453E39700F904D6 /* Main.storyboard in Resources */,
 				C1859E082454CE9C00CA6F96 /* data.txt in Resources */,
 			);
@@ -347,8 +356,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F0CBA02455286C00774497 /* VideoCell.swift in Sources */,
 				C143F2052453E39700F904D6 /* ViewController.swift in Sources */,
+				C1F0CBA224552A7F00774497 /* SettingsLauncher.swift in Sources */,
 				C143F2012453E39700F904D6 /* AppDelegate.swift in Sources */,
+				C1F0CB9E24551D5400774497 /* SettingCell.swift in Sources */,
 				C143F2032453E39700F904D6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

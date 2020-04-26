@@ -10,8 +10,9 @@ import UIKit
 import MapKit
 import CoreLocation
 import RadarSDK
+import Foundation
 
-class ViewController: UIViewController, CLLocationManagerDelegate{
+class ViewController: UIViewController{
 
     /**
      My variables
@@ -20,16 +21,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
      @IBOutlet var SlideButton: UIButton!
     
      let locationManager = CLLocationManager()
-    
      let regionInMeters: Double = 10000 // region of viewing
     
     // Menu
-    let collectionView:UICollectionView = {
-        let layout = UICollectionViewLayout()
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = UIColor.white
-        return cv
-    }()
+//    let collectionView:UICollectionView = {
+//        let layout = UICollectionViewLayout()
+//        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+//        cv.backgroundColor = UIColor.white
+//
+//        return cv
+//    }()
+//    let cellId = "cellId"
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     /**
      
@@ -42,19 +55,42 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
          General Necessities
          */
         MapView.delegate = self
+//        Radar.setDelegate(self)
         checkLocationServices()
+        
+        /**
+         Grab Locations from txt file
+         */
+        let filename = Bundle.main.path(forResource: "places_togo", ofType: "txt")
+        var readString = ""
+        do{
+            readString = try String(contentsOfFile: filename!)
+        }
+        catch let error as NSError{
+            print("Failed to read from project")
+        }
+//        self.collectionView.register(MyCell.self, forCellWithReuseIdentifier: "MyCell")
+        let lines = readString.split(separator:"\n")
+        print(lines)
+        for p in lines{
+            let information = p.split(separator:",")
+            let addy: String = String(information[2])
+            Radar.geocode(address:addy){(status, addresses) in
+//                print("Geocode: status = \(Radar.stringForStatus(status)); coordinate = \(String(describing: addresses?.first?.coordinate))")
+                let latt :Double = (Double((addresses?.first?.coordinate.latitude)!))
+                let lonng :Double = (Double((addresses?.first?.coordinate.longitude)!))
+                self.goToLocation(latt, lonng, String(information[0]), String(information[1]))
+                self.give_route(latt, lonng, 0)
+            }
+        }
         
         /* Radar.io code*/
         Radar.trackOnce { (status: RadarStatus, location: CLLocation?, events: [RadarEvent]?, user: RadarUser?) in
           // do something with location, events, user
             print("hi \n")
         }
-
         
-        
-//        goToLocation(51.50007773, -0.1246402, "Big Ben", "little")
-        
-        give_route(37.7620, -122.3034, 0)
+//        give_route(37.7620, -122.3034, 0)
 
         
     }
@@ -74,25 +110,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
             locationManager.delegate = self
         }
         
-        print("phase 1")
+        
         let sourceCoordinates = locationManager.location?.coordinate
         let destCoordinates = CLLocationCoordinate2DMake(lat, long)
         
-        print("Pase 2")
+        
         let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinates!)
         let destPlacemark = MKPlacemark(coordinate: destCoordinates)
-        print("phase 3")
+        
         let sourceItem = MKMapItem(placemark: sourcePlacemark)
         let destItem = MKMapItem(placemark: destPlacemark)
         
-        print("pase 4")
+        
         let directionRequest = MKDirections.Request()
         directionRequest.source = sourceItem
         directionRequest.destination = destItem
         
         directionRequest.transportType = .walking
         
-        print("phase 5")
+       
         let directions = MKDirections(request: directionRequest)
         directions.calculate(completionHandler: {
             response, error in
@@ -102,7 +138,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                 }
                 return
             }
-            print("phase 6")
+            
             let route = response.routes[0]
             self.MapView.addOverlay(route.polyline, level: .aboveRoads)
             let rekt = route.polyline.boundingMapRect
@@ -172,49 +208,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     /**
      Menu code
      */
-    let blackView = UIView()
+//    let blackView = UIView()
     
-    @IBAction func ScrollUP(_ sender: Any) {
 
-        if let window = UIApplication.shared.keyWindow{
-            
-            blackView.backgroundColor = UIColor(white:0, alpha:0.5)
-            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
-            
-            window.addSubview(blackView)
-            blackView.frame = window.frame
-            blackView.alpha = 0
-            
-            UIView.animate(withDuration: 0.5, animations:
-                {self.blackView.alpha = 1})
-            
-            
-            window.addSubview(collectionView)
-            
-            let height : CGFloat = 500
-            let y = window.frame.height - height
-            
-            collectionView.frame = CGRect(x: 0,y: window.frame.height,width: window.frame.width, height: 500)
-            
-            
-            UIView.animate(withDuration: 0.5, delay:0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations:{
-                self.collectionView.frame = CGRect(x: 0,y: y,width: self.collectionView.frame.width, height: self.collectionView.frame.height)}, completion: nil)
-            
-        }
-        
+    let settingsLauncher = SettingsLauncher()
+    func handle_slidups(){
+        settingsLauncher.showSettings()
     }
-    
-    @objc func handleDismiss(){
-        UIView.animate(withDuration: 0.5){
-            self.blackView.alpha = 0
-        }
-        UIView.animate(withDuration: 0.5) {
-             if let window = UIApplication.shared.keyWindow{
-                 self.collectionView.frame = CGRect(x: 0,y: window.frame.height, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
-             }
-         }
-    }
-    
+
     
     /*
      Go to the Location of a coordinate
@@ -227,7 +228,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         let location =  CLLocationCoordinate2D(latitude: lat, longitude: long)
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: location, span: span)
-          MapView.setRegion(region, animated: true)
+//          MapView.setRegion(region, animated: true)
+        
+        // annotations
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = category
+        annotation.subtitle = specific
+        MapView.addAnnotation(annotation)
+    }
+    
+    /**Given location go put an annotation on it*/
+    func placeAddy(_ location: CLLocationCoordinate2D, _ category: String, _ specific: String){
+        let location =  location
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: location, span: span)
+//          MapView.setRegion(region, animated: true)
         
         // annotations
         let annotation = MKPointAnnotation()
@@ -250,32 +266,82 @@ extension ViewController:MKMapViewDelegate{
         if let title = annotation.title, title ==  "Big Ben"{
             annotationView?.image = UIImage(named: "plant")
         }
-        else if let title = annotation.title, title ==  "Ortega Park"{
-            annotationView?.image = UIImage(named: "star")
-        }
-        else if annotation === mapView.userLocation{
+
+        if annotation === mapView.userLocation{
              annotationView?.image = UIImage(named: "Location")
+        }
+        else{
+            annotationView?.image = UIImage(named: "star")
         }
         annotationView?.canShowCallout = true
         return annotationView
     }
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("annotation selected")
+        handle_slidups()
+        mapView.deselectAnnotation(view.annotation, animated: true)
+        
     }
+    
+    
+    
+    
+    
+    
 }
 
-//extension ViewController: CLLocationManagerDelegate{
-//    func locationManager(manager: CLLocationManager, didUpdateLocations locations:[CLLocation]){
-//        guard let location = locations.last else{return}
-//        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-//        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-//        MapView.setRegion(region, animated: true)
-//    }
-//    func locationManager(manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
-//
-//        checkLocationAuthorization()
-//
-//    }
-//
-//}
+extension ViewController: CLLocationManagerDelegate{
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations:[CLLocation]){
+        guard let location = locations.last else{return}
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+        MapView.setRegion(region, animated: true)
+    }
+    func locationManager(manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
 
+        checkLocationAuthorization()
+
+    }
+
+}
+
+
+//extension ViewController: UICollectionViewDataSource {
+//
+//
+////}
+//
+//extension ViewController: UICollectionViewDelegate {
+//
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print(indexPath.row + 1)
+//    }
+//}
+//
+//extension ViewController: UICollectionViewDelegateFlowLayout {
+//
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        return CGSize(width: collectionView.bounds.size.width - 16, height: 120)
+//    }
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 8
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 0
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets.init(top: 8, left: 8, bottom: 8, right: 8)
+//    }
+//}
+//
